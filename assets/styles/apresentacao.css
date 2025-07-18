@@ -1,0 +1,98 @@
+/* Formatação somente para o header e barra de navegação do site */
+header{
+    /* Definindo largura do elemento #topo como 100% da tela de maneira dinamica,
+     Margin 1 rem( 1 rem equivale a quantos pixels tiver definido no root da página )*/
+    width: 100dvw;
+    margin: 5rem 0 0;
+}
+
+header h1{
+    /* Centralizando Título,
+    Aumentando tamanho da fonte do título em rem,
+    Dando destaque no título com cor,
+    deixando em itálico
+    */
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--destaque2);
+    font-style: italic;
+}
+
+nav{
+    /* Largura para 100% da largura da tela do dispositivo,
+    margem topo 4 rem e os outros 0,
+    colocando posição sticky para quando eu ir para baixo, aparecer o nav no site ainda*/
+    width: 100dvw;
+    margin: 4rem 0 0;
+
+    position: sticky;
+    top: 1.2rem;
+}
+
+.menu{
+    /*Tirando marcadores dos itens da lista,
+    configurando o layout com flexbox,
+    definindo o sentido para linha(row) e podendo ser quebravel(wrap),
+    alinhar os itens no sentido linha e coluna para o centro
+    */
+    list-style-type: none;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Criando um elemento como ultimo filho de menu que vai ser uma reta para estilizar o menu*/
+.menu::after{
+    /*
+    Colocando nada em conteudo,
+    inserindo posição de acordo com elemento pai de 2.5 rem em relação ao top do pai,
+    definindo sua largura para 50% da largura do elemento que ele esta contido,
+    altura 1 px e cor de texto,
+    e opacidade de 25% para nao deixar branco demais, e sim mais um cinza
+    */
+    content: '';
+    position: absolute;
+    top: 2.5rem;
+    width: 50%;
+    height: 1px;
+    background-color: var(--texto);
+    opacity: 25%;
+}
+
+.menu li{
+    /* Configuração para centralizar o icone e texto no centro e
+    aumentar tamanho da fonte*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.2rem;
+}
+
+.menu li a{
+    /*
+    Definindo a largura dos links dentro dos itens da lista para 100%,
+    colocando um pequeno preenchimento,
+    e colocando um efeito de transação com duração definida e ficando mais lenta no final
+    */
+    width: 100%;
+    padding: .3rem .6rem;
+    transition: .5s ease-out;
+}
+
+.menu li a:hover{
+    /*Estilizando o que acontece ao passar mouse em cima do link do menu,
+    colocando sombra,
+    colocando bordas levemente arrendondadas */
+    box-shadow: 0 0 3px 2px var(--efeito-foco);
+    border-radius: 5px;
+}
+
+/* Colocar todos icones do menu para mudar de cor ao passar mouse em cima do link*/
+.menu li a:hover i{
+    color: var(--destaque1);
+}

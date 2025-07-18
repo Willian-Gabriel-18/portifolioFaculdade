@@ -1,0 +1,60 @@
+/* Formatação somente para seção sobre mim */
+#sobre-mim{
+    /* Colocando largura e minimo de altura da seção para ser igual a largura do dispositivo,
+    colocando um preenchimento para estilização e organização de layout, deixando imagem mais para dentro da seção,
+    criando uma margem para separar mais a seção do elemento acima,
+    colocando display flex para centralizar os conteudos no centro, tanto no sentido horizontal, quanto no vertical,
+    separando a foto do conteudo de texto em 3 rem
+    */
+    width: 100dvw;
+    min-height: 100dvh;
+    padding: 6rem 2rem 2rem 2rem;
+    margin: 4rem 0 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    
+}
+
+#minha-foto{
+    /* Colocando um tracejado ao redor da foto e deixando arrendondado */
+    outline: 3px dashed var(--texto);
+    border-radius: 50%;
+    
+    /*definindo largura e altura da foto para 30% da largura do dispositivo*/
+    width: 30vw;
+    height: 30vw;
+}
+
+.conteudo{
+    /*Estilizando o conteudo de texto, deixando letras um pouco maior, 
+    e alinhando com justify*/
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.conteudo h1{
+    /*Aumentando tamanho do titulo dinamicamente e colocando uma cor de destaque ao título da seção*/
+    font-size: calc(1.3rem + 3dvw);
+    color: var(--destaque2);
+
+    /*Colocando um tracinho para estilização*/
+    box-shadow: 0 1px 0px var(--texto);
+    padding-bottom: .5rem;
+    width: fit-content;
+}
+
+.conteudo h1 i{
+    /*Separando icone do título da letra e definindo sua cor para cor de texto*/
+    margin-right: 1rem;
+    color: var(--texto);
+}
+
+.conteudo p{
+    /*Colocando indentação nos paragrafos, e criando uma margem no top para separar melhor os elementos*/
+    text-indent: 2rem;
+    margin-top: 1.5rem;
+}

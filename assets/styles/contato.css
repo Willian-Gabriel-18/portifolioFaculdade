@@ -1,0 +1,179 @@
+/*Formatação de estilos da seção contato e o elemento de feedback do formulário*/
+#contato{
+    /*Colocando a largura da seção contato para 100% da largura do dispositivo,
+    configurando layout flexbox em sentido coluna e alinhando todos itens horizontalmente no centro,
+    e colocando uma margem no topo para separar essa seção da anterior alem de um preenchimento para estilização*/
+    width: 100dvw;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    margin-top: 4rem;
+    padding: 4rem 0;
+}
+
+#contato h1{
+    /*Defindo tamanho do título da seção, definindo cor do texto*/
+    font-size: calc(1.5rem + 3.5dvw);
+    color: var(--destaque2);
+    
+    /*Colocando um tracinho para estilização*/
+    box-shadow: 0 1px 0px var(--texto);
+    padding-bottom: .5rem;
+    width: 30%;
+}
+
+#contato h1 i{
+    /*Alterando cor do ícono do título*/
+    color: var(--destaque1);
+}
+
+#contato form{
+    /*No formulário, inseri uma margem no topo para separar os elementos e preenchimento para estilização,
+    e coloquei layout flexbox em sentido coluna com itens alinhados horizontalmente ao centro separados com gap,
+    e um box shadow para ter uma borda um pouco mais bonita*/
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+
+    box-shadow: 0 0 3px 1px var(--destaque2);
+}
+
+#contato form h2{
+    /*Definindo tamanho do título*/
+    font-size: 2.5rem;
+}
+
+#contato form .entrada-form{
+    /*As 2 entradas devem ocupar uma largura de 100% e ter um layout de flexbox,
+    só para deixar todos elementos filhos ocupando 100% de largura e organizar o layout em sentido coluna*/
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#contato form .entrada-form label{
+    /*Definindo tamanho do texto de label*/
+    font-size: 1.5rem;
+}
+
+#contato form .entrada-form input, textarea{
+    /*Definindo tamanho do texto dos input e textarea,
+    colocando preenchimento, arrendondando bordas,
+    colocando uma 'borda' um pouco separada do campo para deixar mais bonito*/
+    font-size: 1rem;
+    padding: .5rem .3rem;
+
+    border-radius: 8px;
+    outline: 1px solid var(--destaque1);
+    outline-offset: 2px;
+}
+
+#contato form .entrada-form #uMensagem{
+    /*Tirando o resize que o textarea tem por padrao e definindo sua altura*/
+    resize: none;
+    height: 180px;
+}
+
+#contato form button{
+    /*Definindo tamanho do texto do botao, colocando preenchimento,
+    colocando cursor pointer para ficar mais intuitivo que aqui é um local para clicar,
+    arrendondando bordas e definindo cores de fundo e texto, e colocando transição */
+    font-size: 2rem;
+    padding: .5rem 2rem;
+    cursor: pointer;
+
+    border-radius: 4px;
+
+    background-color: var(--fundo);
+    color: var(--texto);
+
+    transition: .3s ease-out;
+}
+
+#contato form button:hover{
+    /*Definindo cor da borda para quando mouse passar em cima*/
+    border-color: var(--efeito-foco);
+}
+
+.form-feedback-container{
+    /*Deixando display none para ele nao aparecer enquanto a condição para ele aparecer não for atendida,
+    deixando posição fixada e no começo da página,
+    definindo a largura e altura da página em 100% e colocando cor de fundo,
+    pré-configurando o layout de flexbox colocando todos elementos no centro*/
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 27, 27, 0.4);
+
+    align-items: center;
+    justify-content: center;
+}
+
+.form-feedback{
+    /*
+    Definindo cor de fundo, e deixando uma altura específica,
+    colocando preenchimento e sombra para estilizar e destacar,
+    e colocando no layout de flexbox para centralizar todos elementos ao centro
+    */
+    background-color: var(--fundo);
+
+    height: 450px;
+    padding: 2rem;
+
+    box-shadow: 0 0 3px 1px var(--destaque2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-feedback p{
+    /*Definindo cor para o texto, deixando em negrito e definindo tamanho do  texto*/
+    color: var(--destaque1);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.form-feedback p i{
+    /*Definindo cor do ícone*/
+    color: yellow;
+}
+
+#btnFecharFeedback{
+    /*Deixando o botao de fechar a janela de feedback no canto superior direito,
+    deixando fundo transparente e deixando arredondado,
+    tirando bordas e colocando sombra para destacar e
+    configurando a transição*/
+    position: absolute;
+    top: 5%;
+    right: 5%;
+
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 3px 2px var(--destaque1);
+
+    font-size: 2.5rem;
+    color: var(--texto);
+    padding: 0 .5rem;
+
+    transition: .3s ease-out;
+}
+
+#btnFecharFeedback:hover{
+    /* Colocando sombra no botao, cor de texto e cursor ponteiro se eu passar mouse em cima dele*/
+    box-shadow: 0 0 3px 2px var(--efeito-foco);
+    color: var(--destaque2);
+    cursor: pointer;
+}

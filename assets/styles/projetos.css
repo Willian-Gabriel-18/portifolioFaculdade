@@ -1,0 +1,172 @@
+/* Formatação de estilo da seção projetos*/
+#projetos{
+    /*Definindo largura da seção habilidade para 100% da largura da tela,
+    colocando margem para dar um espaço entre essa seção e a anterior,
+    colocando preenchimento para ficar visualmente melhor,
+    criando flexbox no sentido coluna sem quebra, e alinhando tudo ao centro para facilitar a estilização */
+    width: 100dvw;
+    margin-top: 4rem;
+    padding: 3rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#projetos h1{
+    /*Deixando tamanho do título da seção dinamico,
+    centralizando título,
+    colocando cor para destacar,
+    criando uma reta para estilização com boxshadow e mais algumas configurações para definir o tamanho, e preenchimento de baixo*/
+    font-size: calc(1.5rem + 3.5dvw);
+    text-align: center;
+    color: var(--destaque2);
+
+    /*Colocando um tracinho para estilização*/
+    box-shadow: 0 1px 0px var(--texto);
+    padding-bottom: .5rem;
+    width: 50%;
+}
+
+#projetos h1 i{
+    /*Inserindo cor no icone do título da seção*/
+    color: rgb(255, 174, 0);
+}
+
+#projetos > p{
+    /*Estilizando paragrafo que for diretamente filho de #projetos,
+    Definindo tamanho da letra,
+    alinhamento justify,
+    identação,
+    e um espaço para dar entre o paragrafo e o elemento acima*/
+    font-size: 1.5rem;
+    text-align: justify;
+    text-indent: 1.7rem;
+    margin-top: 2rem;
+}
+
+.projetos{
+    /*Colocando margem no topo,
+    display grid para organizar o layout em 2 dimensões,
+    criando 3 colunas modelos, cada uma do mesmo tamanho,
+    alinhando conteudo no centro tanto no eixo x, quanto no y, para facilitar estilização*/
+    margin-top: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.projeto{
+    /*
+    Definindo altura,
+    colocando sombra na caixa de projeto,
+    arrendondando bordas, 
+    colocando preenchimento,
+    definindo layout flexbox,
+    colocando sentido coluna e sem quebra,
+    dando espaço entre os contéudos com o gap e o justify content,
+    colocando transição para quando eu passar mouse em cima do elemento
+    */
+    height: 100%;
+
+    box-shadow: 0 0 2px 2px var(--destaque1);
+    border-radius: 12px;
+    padding: 1rem 1rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    gap: 1rem;
+
+    transition: .3s ease-in;
+}
+
+.projeto:hover{
+    /*
+    Quando mouse passar em cima do elemento,
+    cursor ponteiro,
+    e cor de fundo para destacar*/
+    cursor: pointer;
+    background-color: rgba(138, 138, 138, 0.200);
+}
+
+.projeto img{
+    /*Estilizando as imagens dos projetos, colocando largura 100% e altura,
+    colocando uma borda ao redor atraves do outline, que me permite dar um espaço entre o elemento e a borda com offset,
+    arrendondando bordas imagens*/
+    width: 100%;
+    height: 200px;
+
+    outline: 2px solid var(--destaque2);
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+.projeto .project-info{
+    /*Alinhando textos dentro de project-info para justify*/
+    text-align: justify;
+}
+
+.projeto .project-info h2{
+    /*Estilizando títulos dos projetos,
+    deixando negrito e no centro, e definindo sua cor,
+    alem de definir tamanho, e arrendondar as bordas*/
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--destaque2);
+
+    font-size: 1.7rem;
+    border-radius: 4px;
+}
+
+.projeto .project-info p{
+    /*Colocando indentação e um espaço entre o paragrafo e o título*/
+    text-indent: 1rem;
+    margin-top: 1rem;
+}
+
+.projeto .projeto-footer{
+    /*Colocando o rodapé do projeto no layout de flexbox,
+    centralizando todos os itens na vertical,
+    dando espaço entre os elementos com justify content: space-between*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projeto .projeto-footer .ferramentas{
+    /*Configurando a lista de ferramentas para nao ter marcador,
+    layout flexbox com itens no centro na horizontal e vertical, para facilitar estilização,
+    dando espaço entre os itens com gap*/
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.projeto .projeto-footer a{
+    /*Estilizando o link do rodapé, o link de solicitar código fonte,
+    deixando com text decoration e com cor destacada, para ficar intuitivo que aquilo é um link,
+    colocando transição para quando eu passar mouse em cima*/
+    text-decoration: underline;
+    text-decoration-color: var(--destaque2);
+    transition: .3s ease-out;
+}
+
+.projeto .projeto-footer a:hover{
+    /*Quando passar mouse em cima do link de solicitar código fonte,
+    vai tirar o text decoration,
+    colocar preenchimento,
+    colocar borda destacada,
+    e arrendondar bordas*/
+    text-decoration: none;
+    padding: .2rem .4rem;
+    border: 1px solid var(--efeito-foco);
+    border-radius: 2px;
+}

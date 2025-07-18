@@ -1,0 +1,62 @@
+/* Formatação css */
+@import 'global.css'; /* Formatação para todos elementos no geral, e para os que se encontram em diferentes seções, sendo aplicada em todo site */
+@import 'apresentacao.css'; /* Formatação somente para o header e barra de navegação do site */
+@import 'sobre.css'; /* Formatação somente para seção sobre mim */
+@import 'habilidades.css';/* Formatação somente para seção habilidades e competencias */
+@import 'projetos.css';/* Formatação somente para seção projetos */
+@import 'contato.css';/* Formatação de estilos da seção contato e o elemento de feedback do formulário*/
+@import 'responsivo.css';/* Formatação para responsividade da página*/
+
+body{
+    /* Definir cor de fundo da página e cor das letras, bordas, e outros elementos,
+     */
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+#page-content{
+    /* Largura da página no tamanho da largura da tela do dispositivo*/
+    width: 100dvw;
+}
+
+/*Estilizando o botao de voltar para o topo*/
+#btnTopo{
+    /*Posição fixada para ficar travada na pagina,
+    travada em baixo e na direita,
+    alterando tamanho do texto do botao,
+    colocando preenchimento em todos os lados e margem para a direita e embaixo,
+    colocando bordas,
+    arrendondando as bordas,
+    colocando cor de fundo,
+    colocando transição
+    */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    font-size: .9rem;
+
+    padding: .4rem;
+    margin: 0 .5rem .5rem 0;/* top, right, bottom, left */
+
+    border: 1px solid var(--destaque2);
+    border-radius: .5rem;
+
+    background-color: var(--fundo);
+    color: var(--texto);
+
+    transition: .15s ease-out;
+}
+
+#btnTopo:hover{
+    /*Deixando em negrito quando o mouse passar em cima, e com bordas destacadas*/
+    font-weight: bold;
+    
+    border: 2px solid var(--efeito-foco);
+}
+
+#btnTopo a{
+    /*Colocando o link para ocupar todo botao*/
+    width: 100%;
+    height: 100%;
+}

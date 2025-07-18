@@ -1,0 +1,67 @@
+/* Formatação somente para seção habilidades*/
+#habilidades{
+    /*Definindo largura da seção habilidade para 100% da largura da tela,
+    colocando margem para dar um espaço entre essa seção e a anterior,
+    colocando preenchimento para ficar visualmente melhor,
+    criando flexbox no sentido coluna sem quebra, e alinhando tudo ao centro para facilitar a estilização */
+    width: 100dvw;
+    margin-top: 4rem;
+    padding: 3rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#habilidades h1{    
+    /*Deixando tamanho do título da seção dinamico,
+    centralizando título,
+    colocando cor para destacar,
+    criando uma reta para estilização com boxshadow e mais algumas configurações para definir o tamanho, e preenchimento de baixo*/
+    font-size: calc(1.3rem + 3.5dvw);
+    text-align: center;
+    color: var(--destaque2);
+
+    /*Colocando um tracinho para estilização*/
+    box-shadow: 0 1px 0px var(--texto);
+    padding-bottom: .5rem;
+    width: 50%;
+}
+
+#habilidades h1 i{
+    /*Inserindo cor no icone do título da seção*/
+    color: yellow;
+}
+
+#habilidades ul{
+    /*Definindo uma largura para todas listas da seção,
+    colocando uma margem no topo para dar um espaço entre o elemento acima da ul e a ul,
+    alinhando texto com justify,
+    aumentando tamanho das letras da lista,
+    definindo outro marcador para lista*/
+    width: 85%;
+    margin-top: 2.5rem;
+
+    text-align: justify;
+    font-size: 1.5rem;
+    list-style: url('../images/marcadorLista32x32.png');
+}
+
+#habilidades h2{
+    /*Colocando um espaço entre o h2 e o elemento acima dele,
+    aumentando tamanho da letra*/
+    margin-top: 2rem; 
+
+    font-size: 1.5rem;
+    color: var(--destaque2);
+}
+
+#habilidades .imgIcon{
+    /*
+    Colocando display inline block para deixar todos elementos irmãos do .imgIcon ao lado dele,
+    definindo um tamanho para o icone
+    */
+    display: inline-block;
+    width: 2rem;
+}

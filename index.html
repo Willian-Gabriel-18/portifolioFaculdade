@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT AWESOME, PARA IMPORTAR ICONES AO MEU PROJETO -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Colocando o estilo-->
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <!--Colocando o script com atributo defer para ele funcionar da mesma maneira que
+    funcionaria se eu colocasse ele como ultimo elemento do body -->
+    <script src="scripts/script.js" defer></script>
+
+    <!---->
+    <title>Portifólio P/ Faculdade UNINTER</title>
+</head>
+<body>
+    <!-- Todo conteudo do site vai ficar nessa div -->
+    <div id="page-content">    
+        <!--Cabeçalho da página com id, para poder voltar ao topo ao clicar no link para isso-->
+        <header id="topo">
+            <h1>Portifólio de Willian G. Rocha Lima Lopes</h1>
+        </header>
+
+        <!-- NAV BAR DO SITE -->
+        <nav>
+            <ul class="menu">
+                <!-- COLOCANDO ID DE ELEMENTOS QUE ESTÃO NO SITE, POSSO NAVEGAR PELO SITE CLICANDO NELES -->
+                <li><a href="#sobre-mim" class="intern-link"><i class="fa-regular fa-circle-user"></i> Sobre Mim</a></li>
+                <li><a href="#habilidades" class="intern-link"><i class="fa-solid fa-star"></i> Habilidades</a></li>
+                <li><a href="#projetos" class="intern-link"><i class="fa-solid fa-folder"></i> Projetos</a></li>
+                <li><a href="#contato" class="intern-link"><i class="fa-regular fa-comment-dots"></i> Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- SEÇÃO SOBRE MIM -->
+        <section id="sobre-mim">
+            <img id="minha-foto" src="assets/images/foto.jpg" alt="Uma foto minha no estilo anime">
+
+            <div class="conteudo">
+                <h1><i class="fa-regular fa-circle-user"></i>Sobre Mim</h1>
+                <p>Olá, sou Willian, sou um estudante da área de computação, faz uns anos que já pesquiso sobre a área e eu me empolguei muito inicialmente com programação de games, e estudei a parte basica de linguagens como <span class="destacar">C++</span>, <span class="destacar">Java</span>.</p>
+                <p>Já trabalhei com programação de microcontroladores (Arduino) no ensino Médio com a linguagem <span class="destacar">C++</span>, participando de uma competição de robótica com um robô segue linha, e um sumô. Hoje, estou mais focado em aprender desenvolvimento Web e Desktop com <span class="destacar">JavaScript</span> e <span class="destacar">Delphi</span>.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO HABILIDADES E COMPETÊNCIAS -->
+        <section id="habilidades">
+            <h1><i class="fa-solid fa-star"></i> </a> Principais Habilidades e Competências</h1>
+            <!-- PRINCIPAIS HABILIDADES E COMPETÊNCIAS ABAIXO, OBS: ALGUNS ICONES SAO IMAGENS POR NÃO TER O ICONE DELAS NO FONT AWESOME -->
+            <ul>
+                <li><i class="fa-solid fa-graduation-cap icones"></i> Ensino Médio Completo, atualmente cursando superior em Análise e Desenvolvimento de Sistemas na UNINTER.</li>
+                <li><i class="fa-brands fa-html5 icones"></i> <span class="destacar">HTML</span>, <i class="fa-brands fa-css3-alt icones"></i> <span class="destacar">CSS</span> e <i class="fa-brands fa-js icones"></i> <span class="destacar">JS</span>.</li>
+                <li><i class="fa-brands fa-python icones"></i> <span class="destacar">Python</span>.</li>
+                <li><img src="assets/images/cppIcon.png" alt="Icone da linguagem de programação C++" class="imgIcon"> Básico de <span class="destacar">C++</span>.</li>
+                <li><i class="fa-brands fa-vuejs icones"></i> <span class="destacar">VueJS</span>.</li>
+            </ul>
+            <h2>Atualmente estudando: </h2>
+            <ul>
+                <li><i class="fa-brands fa-node-js icones"></i> <span class="destacar">Node JS</span>.</li>
+                <li><i class="fa-solid fa-database icones"></i> <span class="destacar">MySQL/PostgreSQL</span>.</li>
+                <li><img src="assets/images/nuxtIcon.png" alt="Icone de um framework WEB, NUXT JS" class="imgIcon"> <span class="destacar">NuxtJS</span>.</li>
+            </ul>
+        </section>
+
+        <!-- SEÇÃO DE PROJETOS -->
+        <section id="projetos">
+            <h1><i class="fa-solid fa-folder"></i> Projetos desenvolvidos</h1>
+            <!-- LISTA DE ALGUNS PROJETOS QUE EU DESENVOLVI COM MEU LINK DO GITHUB E LINKS PARA ACESSAR ESSES PROJETOS -->
+            <p>Meus projetos encontram-se todos no <a href="https://github.com/Willian-Gabriel-18" class="external-link" target="_blank">GitHub</a>, sendo que a maioria deles estão privados, caso queira o código fonte de algum dos projetos abaixo, por favor entre em <a href="#contato" class="intern-link">contato</a>. Para abrir os projetos, basta <span class="destacar">clicar neles</span>.</p>
+
+            <!--Local onde vou colocar os 3 projetos-->
+            <div class="projetos">
+                <!--Projeto 1 -->
+                <div class="projeto" id="projeto1">
+                    <!-- Imagem da página do projeto -->
+                    <img src="assets/images/projeto1.png" alt="Imagem de uma parte do projeto 1 - questionário sobre o câncer">
+                    
+                    <!--Informações de título e sobre o projeto-->
+                    <div class="project-info">
+                        <!-- Título e Descrição do projeto -->
+                        <h2>Questionário Câncer</h2>
+                        <p>Um questionário com 10 perguntas sobre o câncer, dando feedback do número de acertos.</p>
+                    </div>
+                    
+                    <!-- Rodapé da div do projeto -->
+                    <div class="projeto-footer">
+                        <!-- FERRAMENTAS UTILIZADAS -->
+                        <ul class="ferramentas">
+                            <li><i class="fa-brands fa-html5 icones"></i></li>
+                            <li><i class="fa-brands fa-css3-alt icones"></i></li>
+                            <li><i class="fa-brands fa-js icones"></i></li>
+                            <li><i class="fa-brands fa-vuejs icones"></i></li>
+                        </ul>
+                        <!-- Solicitar código fonte -->
+                        <a href="#contato" class="intern-link">Código Fonte</a>
+                    </div>
+                </div>
+
+                <!--Projeto 2 -->
+                <div class="projeto" id="projeto2">
+                    <!-- Imagem da página do projeto -->
+                    <img src="assets/images/projeto2.png" alt="Imagem de uma parte do projeto 2 - FRONT END DE UMA LOJA VIRTUAL">
+                    
+                    <!--Informações de título e sobre o projeto-->
+                    <div class="project-info">
+                        <!-- Título e Descrição do projeto -->
+                        <h2>Loja virtual</h2>
+                        <p>Front End de uma loja virtual de materiais de construção.</p>
+                    </div>
+
+                    <!-- Rodapé da div do projeto -->
+                    <div class="projeto-footer">
+                        <!-- FERRAMENTAS UTILIZADAS -->
+                        <ul class="ferramentas">
+                            <li><i class="fa-brands fa-html5 icones"></i></li>
+                            <li><i class="fa-brands fa-css3-alt icones"></i></li>
+                            <li><i class="fa-brands fa-js icones"></i></li>
+                            <li><i class="fa-brands fa-vuejs icones"></i></li>
+                        </ul>
+                        <!-- Solicitar código fonte -->
+                        <a href="#contato" class="intern-link">Código Fonte</a>
+                    </div>
+                </div>
+
+                <!--Projeto 3 -->
+                <div class="projeto" id="projeto3">
+                    <!-- Imagem da página do projeto -->
+                    <img src="assets/images/projeto3.png" alt="Imagem do projeto 3 - PEDRA PAPEL TESOURA">
+                    
+                    <!--Informações de título e sobre o projeto-->
+                    <div class="project-info">
+                        <!-- Título e Descrição do projeto -->
+                        <h2>Pedra, papel e tesoura</h2>
+                        <p>Jogo de pedra, papel e tesoura contra bot, desenvolvido quando estava estudando pelo OdinProject.</p>
+                    </div>
+
+                    <!-- Rodapé da div do projeto -->
+                    <div class="projeto-footer">
+                        <!-- FERRAMENTAS UTILIZADAS -->
+                        <ul class="ferramentas">
+                            <li><i class="fa-brands fa-html5 icones"></i></li>
+                            <li><i class="fa-brands fa-css3-alt icones"></i></li>
+                            <li><i class="fa-brands fa-js icones"></i></li>
+                        </ul>
+                        <!-- Solicitar código fonte -->
+                        <a href="#contato" class="intern-link">Código Fonte</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CONTATO -->
+        <section id="contato">
+            <h1><i class="fa-regular fa-comment-dots"></i> Contato</h1>
+            <!-- FORMULÁRIO PARA ENTRAR EM CONTATO COM O DESENVOLVEDOR(EU) -->
+            <!-- OBS: NÃO ESTÁ ENVIANDO NADA PRO MEU EMAIL, É SÓ UMA REPRESENTAÇÃO-->
+
+            <!-- FORMULÁRIO COM METHOD POST PARA NÃO FICAR NOME, EMAIL E MENSAGEM DO USUARIO NA URL,
+             GARANTINDO MAIS SEGURANÇA -->
+            <form method="post" id="form-contato">
+                <!-- O PREENCHIMENTO DE TODOS OS CAMPOS SÃO OBRIGATÓRIOS -->
+                <h2>Entre em contato:</h2>
+
+                <!--DIVs entrada-form para facilitar estilização do formulário-->
+                <!-- ENTRADA EMAIL -->
+                <div class="entrada-form">
+                    <label for="uEmail">Email: </label>
+                    <input type="email" name="email" id="uEmail" required placeholder="Insira seu email...">
+                </div>
+                
+                <!-- ENTRADA ASSUNTO -->
+                <div class="entrada-form">
+                    <label for="uAssunto">Assunto: </label>
+                    <input type="text" name="assunto" id="uAssunto" required maxlength="25" placeholder="Insira o assunto...">
+                </div>                
+
+                <!-- ENTRADA MENSAGEM -->
+                <div class="entrada-form">
+                    <label for="uMensagem">Mensagem: </label>
+                    <textarea id="uMensagem" name="mensagem" required maxlength="250" placeholder="Insira sua mensagem(max: 250 caracteres)..."></textarea>
+                </div>
+
+                <!-- ENVIAR -->
+                <button type="submit" id="btnEnviar">Enviar</button>
+            </form>
+        </section>
+        
+        <!--Criando um elemento para ser o feedback quando o usuario tentar enviar o email -->
+        <div class="form-feedback-container">
+            <div class="form-feedback">
+                <button id="btnFecharFeedback"><i class="fa-solid fa-xmark"></i></button>
+                <p><i class="fa-solid fa-star"></i> Enviado com sucesso!</p>
+            </div>
+        </div>
+
+        <!--Criando botao de voltar para o topo-->
+        <button id="btnTopo"><a href="#topo">Voltar para o topo</a></button>
+    </div>
+</body>
+</html>

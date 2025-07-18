@@ -1,0 +1,100 @@
+/* Formatação para todos elementos no geral, sendo aplicada em todo site */
+*{
+    /* CONFIGURAÇÃO BÁSICA PARA REINCIAR E CONFIGURAR ALGUMAS ESTILIZAÇÕES,
+    DEIXANDO PREENCHIMENTO DOS ELEMENTOS ZERADO E MARGEM ENTRE ELES ZERADA,
+    ALÉM DE APLICAR EM TODOS ELEMENTOS HTML, O BORDER-BOX.*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    /* Configurações para elemento raiz do projeto*/
+    font-size: 20px; /* Definir esse tamanho de fonte para todo texto do site */
+
+    /* Paleta das Cores mais usadas */
+    /* Colocando '--' antes de um nome cria uma variável no CSS, e como está no root, poderá ser usada em todo lugar */
+    --fundo: #0D0D0D;
+    --texto: #FFFFFF;
+    --destaque1: #00FF85;
+    --destaque2: #1E90FF;
+    --efeito-foco: #FF0099;
+}
+
+img{
+    /*Definir todas imagens para display block, para facilitar estilização,
+    Deixando todas imagens com largura máxima de 100% do tamanho da tela do dispositivo*/
+    display: block;
+    max-width: 100dvw;
+}
+
+a{
+    /*Os links do site não ter mais text decoration,
+    e colocando sua cor para ser herdada de seu elemento pai*/
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    /* Estilizar links do site, quando ao passar mouse em cima, o cursor deve ser pointer */
+    cursor: pointer;
+}
+
+section{
+    /* Defindo as larguras de todas as section para serem iguais a largura da tela do dispositivo */
+    width: 100dvw;
+}
+
+.destacar{
+    /*Destacando as linguagens de programação, ferramentas, e outros textos*/
+    color: var(--destaque1);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.6rem;
+}
+
+/*Colocando estilos padrão para alguns icones*/
+.icones{
+    font-size: 2rem;   
+}
+
+.fa-graduation-cap{
+    color: var(--destaque2);
+}
+
+.fa-html5{
+    color: orangered;
+}
+
+.fa-css3-alt{
+    color: var(--destaque2);
+}
+
+.fa-js{
+    color: yellow;
+}
+
+.fa-python{
+    color: yellow;
+}
+
+.fa-vuejs{
+    color: green;
+}
+
+.fa-node-js{
+    color: greenyellow;
+}
+
+.fa-database{
+    color: var(--destaque2);
+}
+
+.intern-link{
+    font-weight: bold;
+}
+
+.external-link{
+    text-decoration: underline;
+    color: salmon;
+}

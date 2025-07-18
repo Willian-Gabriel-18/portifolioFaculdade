@@ -1,0 +1,112 @@
+/*
+Criando breakpoints e estilizações para deixar site responsivo,
+como estou no design desktop first, vou usar o max width para
+quebrar a página em vários blocos de estilo.
+*/
+
+/* *{border: 1px solid red;} */
+
+@media (max-width: 768px){
+    /* Diminuindo tamanho do título do cabeçalho*/
+    header h1{
+        font-size: calc(1rem + 3dvw);
+    }
+
+    /* Diminuindo o espaço entre os elementos do menu*/
+    .menu{
+        gap: .6rem;
+    }
+
+    /* Na seção sobre mim, quero que o layout flexbox se direcione verticalmente, e que tenha um espaço entre os elementos,
+    além de uma alteração no preenchimento*/
+    #sobre-mim{
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        padding: 4rem 3rem 2rem 3rem;
+    }
+
+    /* Centralizando título da seção sobre Mim*/
+    .conteudo h1{
+        margin: 0 auto;
+    }
+
+    /* Alterando tamanho do título da seção habilidades*/
+    #habilidades h1{
+        font-size: calc(1rem + 3dvw);
+    }
+
+
+    /* Alterando tamanho da fonte dos elementos dentro da ul da seção habilidades*/
+    #habilidades ul{
+        font-size: 1.3rem;
+    }
+
+    /* Alterando tamanho do título da seção projetos */
+    #projetos h1{
+        font-size: calc(1rem + 3dvw);
+    }
+
+    /* Alterando tamanho do paragrafo diretamente filho de #projetos*/
+    #projetos > p{
+        font-size: 1.1rem;
+    }
+
+    /* Alterando tamanho da fonte do .destacar da seção projetos*/
+    #projetos .destacar{
+        font-size: 1.4rem;
+    }
+
+    /* Alterando o layout de grid dos projetos, colocando para ficar somente 1 coluna */
+    .projetos{
+        grid-template-columns: 1fr;
+    }
+
+    /* Alterando o tamanho da letra e preenchimento de cada bloco de projeto */
+    .projeto{
+        font-size: 1.4rem;
+        padding: 1.5rem 2rem;
+    }
+
+    /* Alterando tamanho do título da seção de contatos*/
+    #contato h1{
+        font-size: calc(1rem + 2.5dvw);
+    }
+}
+
+@media (max-width: 580px){
+    /* Alterando tamanho do título da seção sobre mim*/
+    .conteudo h1{
+        font-size: calc(1.3rem + 2dvw);
+    }
+
+    /* Alterando tamanho do título da seção habilidades*/
+    #habilidades h1{
+        font-size: calc(1rem + 2dvw);
+    }
+
+    /* Alterando tamanho da fonte dos elementos dentro da ul da seção habilidades*/
+    #habilidades ul{
+        font-size: 1.1rem;
+    }
+
+    /* Alterando tamanho da fonte dos elementos com classe destacar da seção habilidades*/
+    #habilidades .destacar{
+        font-size: 1.3rem;
+    }
+
+    /* Alterando tamanho do título da seção de contatos*/
+    #contato h1{
+        font-size: calc(1rem + 2dvw);
+    }
+
+    /* Alterando largura do formulário da seção contato*/
+    #contato form{
+        width: 70%;
+    }
+
+    /* Centralizando título do formulário */
+    #contato form h2{
+        text-align: center;
+    }
+
+}
